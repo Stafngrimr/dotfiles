@@ -93,6 +93,7 @@ alias la='ls -A'
 alias l='ls -CF'
 alias ls='ls -lh'
 alias git-bare='git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
+alias bat='batcat'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert

@@ -96,6 +96,20 @@ bindsym $mod+a focus parent
 # focus the child container
 #bindsym $mod+d focus child
 
+# Window/border defaults
+default_border pixel 1px
+default_floating_border pixel 1px
+hide_edge_borders both
+
+# colors
+client.focused  #ffffff #285577 #ffffff #2e9ef4 #285577
+
+# Desktop background imagery
+exec feh --bg-scale /home/staf/Pictures/96689.jpg
+gaps inner 8px
+gaps outer -2px
+
+
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
 set $ws1 "1"
@@ -171,4 +185,21 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
         status_command i3status
+        font pango:Terminess Nerd Font 12
+        separator_symbol "  //  "
+        workspace_buttons no
+        padding 0 590px
+        colors {
+                background #151515
+                statusline #00ffbf
+                separator #666666
+        }
 }
+
+
+# keybinding to lock screen
+bindsym Control+Mod1+l exec "i3lock-fancy -p"
+
+# autolock the screen
+exec "xautolock -time 1 -locker /usr/bin/i3lock-fancy -detectsleep"
+
