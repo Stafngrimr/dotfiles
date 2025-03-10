@@ -326,29 +326,29 @@ require("lazy").setup({
 	{
 		"tris203/precognition.nvim",
 		--event = "VeryLazy",
-		config = {
-			-- startVisible = true,
-			-- showBlankVirtLine = true,
-			-- highlightColor = { link = "Comment" },
-			-- hints = {
-			--      Caret = { text = "^", prio = 2 },
-			--      Dollar = { text = "$", prio = 1 },
-			--      MatchingPair = { text = "%", prio = 5 },
-			--      Zero = { text = "0", prio = 1 },
-			--      w = { text = "w", prio = 10 },
-			--      b = { text = "b", prio = 9 },
-			--      e = { text = "e", prio = 8 },
-			--      W = { text = "W", prio = 7 },
-			--      B = { text = "B", prio = 6 },
-			--      E = { text = "E", prio = 5 },
-			-- },
-			-- gutterHints = {
-			--     G = { text = "G", prio = 10 },
-			--     gg = { text = "gg", prio = 9 },
-			--     PrevParagraph = { text = "{", prio = 8 },
-			--     NextParagraph = { text = "}", prio = 8 },
-			-- },
-		},
+		-- config = {
+		-- startVisible = true,
+		-- showBlankVirtLine = true,
+		-- highlightColor = { link = "Comment" },
+		-- hints = {
+		--      Caret = { text = "^", prio = 2 },
+		--      Dollar = { text = "$", prio = 1 },
+		--      MatchingPair = { text = "%", prio = 5 },
+		--      Zero = { text = "0", prio = 1 },
+		--      w = { text = "w", prio = 10 },
+		--      b = { text = "b", prio = 9 },
+		--      e = { text = "e", prio = 8 },
+		--      W = { text = "W", prio = 7 },
+		--      B = { text = "B", prio = 6 },
+		--      E = { text = "E", prio = 5 },
+		-- },
+		-- gutterHints = {
+		--     G = { text = "G", prio = 10 },
+		--     gg = { text = "gg", prio = 9 },
+		--     PrevParagraph = { text = "{", prio = 8 },
+		--     NextParagraph = { text = "}", prio = 8 },
+		-- },
+		-- },
 	},
 
 	{ -- Fuzzy Finder (files, lsp, etc)
@@ -832,22 +832,13 @@ require("lazy").setup({
 	},
 
 	{
-		"lvim-tech/lvim-colorscheme",
-		opts = {
-			transparent = true,
-			styles = {
-				sidebars = "transparent",
-				floats = "transparent",
-			},
-		},
-		priority = 1000, -- Make sure to load this before all the other start plugins.
-		init = function()
-			-- Load the colorscheme here.
-			-- Like many other themes, this one has different styles, and you could load
-			-- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
-
-			-- You can configure highlights by doing something like:
-			vim.cmd.hi("Comment gui=none")
+		"sainnhe/everforest",
+		lazy = false,
+		priority = 1000,
+		config = function()
+			vim.g.everforest_enable_italic = true
+			vim.g.everforest_background = "hard"
+			vim.cmd.colorscheme("everforest")
 		end,
 	},
 

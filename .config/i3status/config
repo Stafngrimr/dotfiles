@@ -16,9 +16,11 @@ order += "wireless _first_"
 order += "battery all"
 order += "load"
 
+
 wireless _first_ {
         format_up = "%ip"
         format_down = "NOPE"
+        align = "center"
 }
 
 battery all {
