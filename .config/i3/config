@@ -102,7 +102,7 @@ default_floating_border pixel 1px
 hide_edge_borders both
 
 # colors
-client.focused          #4c7899 #285577 #ffffff #2e9ef4 #00ffbf
+client.focused          #00ffbf #32bf9c #151515 #2e9ef4 #00ffbf
 client.focused_inactive #333333 #5f676a #ffffff #484e50 #5f676a
 client.unfocused        #333333 #222222 #888888 #292d2e #222222
 client.urgent           #2f343a #900000 #ffffff #900000 #900000
@@ -148,7 +148,7 @@ set $mon2 "eDP-1"
 
 workspace $ws1 output $mon1
 workspace $ws2 output $mon1
-workspace $ws3 output $mon2
+workspace $ws3 output $mon1
 workspace $ws4 output $mon2
 workspace $ws5 output $mon1
 workspace $ws6 output $mon1
@@ -207,10 +207,8 @@ bindsym $mod+r mode "resize"
 bar {
         status_command i3status
         font pango:Terminess Nerd Font 12
-        separator_symbol "  <<  "
-        padding 0 10px
+        separator_symbol "  <  "
 
-        workspace_buttons no
         colors {
                 background #151515
                 statusline #00ffbf
