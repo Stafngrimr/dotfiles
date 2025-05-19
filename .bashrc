@@ -94,7 +94,6 @@ alias l='ls -CF'
 alias ls='ls -lh'
 alias git-bare='git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 alias bat='batcat'
-alias cavestomb='cd /home/staf/.config/unity3d/Freehold\ Games/CavesOfQud'
 alias cS='xrandr --output DP-2 --auto --left-of eDP-1'
 
 # Add an "alert" alias for long running commands.  Use like so:

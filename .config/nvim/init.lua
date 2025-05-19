@@ -157,7 +157,7 @@ vim.opt.inccommand = "split"
 vim.opt.cursorline = true
 
 -- Minimal number of screen lines to keep above and below the cursor.
-vim.opt.scrolloff = 10
+vim.opt.scrolloff = 20
 
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
@@ -270,6 +270,19 @@ require("lazy").setup({
 			-- refer to the configuration section below
 		},
 	},
+
+	{
+		"sainnhe/everforest",
+		lazy = false,
+		priority = 1000,
+		config = function()
+			vim.g.everforest_enable_italic = true
+			vim.g.everforest_background = "hard"
+			vim.g.everforest_colors_override = { bg0: ['#111111', '235'] }
+			vim.cmd.colorscheme("everforest")
+		end,
+	},
+
 	{
 		"stevearc/oil.nvim",
 		---@module 'oil'
@@ -828,17 +841,6 @@ require("lazy").setup({
 					{ name = "path" },
 				},
 			})
-		end,
-	},
-
-	{
-		"sainnhe/everforest",
-		lazy = false,
-		priority = 1000,
-		config = function()
-			vim.g.everforest_enable_italic = true
-			vim.g.everforest_background = "hard"
-			vim.cmd.colorscheme("everforest")
 		end,
 	},
 

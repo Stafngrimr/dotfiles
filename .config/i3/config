@@ -206,13 +206,16 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
         status_command i3status
+        output primary
         font pango:Terminess Nerd Font 12
-        separator_symbol "  <  "
+        separator_symbol " < "
+        workspace_buttons no
+        
 
         colors {
-                background #151515
+                background #00291f
                 statusline #00ffbf
-                separator #666666
+                separator #ffffff
         }
 }
 
