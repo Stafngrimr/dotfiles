@@ -1,4 +1,4 @@
-# i3status configuration file.
+# i3status configuration file
 # see "man i3status" for documentation.
 
 # It is important that this file is edited as UTF-8.
@@ -8,20 +8,21 @@
 
 general {
         output_format = "i3bar"
-        colors = false
         markup = pango
         interval = 5
+        colors = true
+        color_bad = "#ff0066"
 }
 
 order += "battery all"
-order += "wireless _first_"
 order += "memory"
 order += "load"
 order += "volume master"
 order += "tztime local"
+order += "wireless _first_"
 
 wireless _first_ {
-        format_up = " %ip "
+        format_up = "%quality"
         format_down = " (╯°□°）╯︵ ┻━┻ "
 }
 
@@ -39,19 +40,18 @@ battery all {
 
 load {
         format = "░▒ %5min ▒░"
-
 }
 
 tztime local {
         format = "<span background='#006048'> %d-%m-%y </span><span background='#018463'> %H:%M </span>"
-        align = "left"
+        separator = false
 }
 
 
 volume master {
         device = "pulse"
-        format = "♬ %volume"
-        format_muted = "-= ☠ =-"
+        format = "♬ (%devicename) %volume"
+        format_muted = "♬ ☠"
 }
 
 memory {

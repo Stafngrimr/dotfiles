@@ -272,13 +272,18 @@ require("lazy").setup({
 	},
 
 	{
-		"sainnhe/everforest",
+		"neanias/everforest-nvim",
+		version = false,
 		lazy = false,
 		priority = 1000,
 		config = function()
-			vim.g.everforest_enable_italic = true
-			vim.g.everforest_background = "hard"
-			vim.g.everforest_colors_override = { bg0: ['#111111', '235'] }
+			require("everforest").setup({
+				transparent_background_level = 1,
+				colours_override = function(palette)
+					palette.bg0 = "#162521"
+					palette.bg1 = "#2b3935"
+				end,
+			})
 			vim.cmd.colorscheme("everforest")
 		end,
 	},
@@ -965,6 +970,5 @@ require("lazy").setup({
 		},
 	},
 })
-
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et

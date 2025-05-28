@@ -82,6 +82,8 @@ if [ -x /usr/bin/dircolors ]; then
     alias grep='grep --color=auto'
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
+    alias weather_home='curl -s wttr.in/Birmingham,UK'
+    alias weather_lon='curl -s wttr.in/London,UK'
 fi
 
 # colored GCC warnings and errors
@@ -91,7 +93,7 @@ fi
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
-alias ls='ls -lh'
+alias ls='exa -lh'
 alias git-bare='git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 alias bat='batcat'
 alias cS='xrandr --output DP-2 --auto --left-of eDP-1'
@@ -125,3 +127,4 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 export PATH=$PATH:/home/staf/.spicetify
+export EDITOR=nvim
