@@ -75,28 +75,19 @@ esac
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-    alias ls='ls --color=auto'
-    #alias dir='dir --color=auto'
-    #alias vdir='vdir --color=auto'
-
     alias grep='grep --color=auto'
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
-    alias weather_home='curl -s wttr.in/Birmingham,UK'
-    alias weather_lon='curl -s wttr.in/London,UK'
 fi
 
 # colored GCC warnings and errors
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
-# some more ls aliases
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
+# some of our own aliases
 alias ls='exa -lh'
 alias git-bare='git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 alias bat='batcat'
-alias cS='xrandr --output DP-2 --auto --left-of eDP-1'
+alias cs='xrandr --output eDP-1 --right-of DP-2'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
